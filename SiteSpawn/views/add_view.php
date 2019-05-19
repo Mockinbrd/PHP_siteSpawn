@@ -4,7 +4,7 @@
 <head>
 
     <?php include_once 'includes/head.php' ?>
-    <?php include_once '_scripts/new_spawn.php' ?>
+    <?php include_once '_scripts/add_spawn.php' ?>
     <title><?= ucfirst($page) ?> - Site Spawn</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/blog/">
     <style>
@@ -32,34 +32,33 @@
 <body>
 <div class="container">
 
-<?php include_once 'includes/header.php' ?>
+    <?php include_once 'includes/header.php' ?>
 
-<div class="text-center" style="margin-top: 30px; margin-bottom: 15px;">
+    <div class="text-center" style="margin-top: 30px; margin-bottom: 15px;">
 
 
 
-    <?php
+        <?php
 
-        if(isset($_POST['spawn'])){
+        if(isset($_POST['adding'])){
 
-            new_spawn($db);
+            add_spawn($db);
         }
 
 
-    ?>
+        ?>
 
-    <form action="#" method='POST'>
-        Veuillez lancer le tirage du Spawn<br><br>
-        <button class="btn btn-primary" name=" spawn" type='submit'>Tirage</button>
-    </form>
+        <form action="#" method="post">
+            <p>
+                <label for="title">Nom du Spawn</label> : <input class="form-group" type="text" name="title" id="title" /><br />
+                <label for="link">Lien de l'image</label> :  <input class="form-group" type="text" name="link" id="link" /><br />
+
+                <input class="btn btn-primary" type="submit" name="adding" value="Envoyer" />
+            </p>
+        </form>
 
 
-    <a href="index.php?page=home"><button class="btn btn-secondary" type='submit'>RESET</button></a><br>
-
-    <a href="index.php?page=add"><button class="btn btn-secondary" type='submit'>Ajouter un Spawn</button></a>
-
-
-</div>
+    </div>
 
 </div>
 
