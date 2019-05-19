@@ -34,7 +34,7 @@
 
 <?php include_once 'includes/header.php' ?>
 
-<div class="text-center">
+<div class="text-center" style="margin-top: 30px; margin-bottom: 15px;">
 
 
 
@@ -49,9 +49,13 @@
     ?>
 
     <form action="#" method='POST'>
-        Veuillez lancer le tirage du Spawn<br>
-        <button name=" spawn" type='submit'>Tirage</button>
+        Veuillez lancer le tirage du Spawn<br><br>
+        <button class="btn btn-primary" name=" spawn" type='submit'>Tirage</button>
     </form>
+
+
+    <a href="index.php?page=home"><button class="btn btn-secondary" name=" spawn" type='submit'>RESET</button></a>
+
 
 </div>
 
