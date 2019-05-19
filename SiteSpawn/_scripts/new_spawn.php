@@ -12,12 +12,4 @@ function new_spawn($db) {
 
 }
 
-
-/* $request = $db->prepare('SELECT * FROM spawnsimages WHERE id = ?');
-$request->execute(array($_GET['Title'));
-while ($data = $request->fetch())
-{
-    echo '<p>' . $data['link'] . '</p>';
-};*/
-
 ?>

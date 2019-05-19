@@ -5,6 +5,7 @@ class spawnsimages
 
     public $id;
     public $title;
+    public $link;
 
     function __construct($id){
 
@@ -15,7 +16,8 @@ class spawnsimages
         $data = $reqSpawnImage->fetch();
 
         $this->id = $id;
-        $this->title = $data['Titre'];
+        $this->title = $data['title'];
+        $this->link = $data['link'];
     }
 
 
